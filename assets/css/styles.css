@@ -1,5 +1,49 @@
+/* Fontes */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Oswald:wght@200..700&display=swap");
+
+/* Root */
+:root {
+  --primary-color: #fff;
+  --secondary-color: #000;
+  --tertiary-color: #106e32;
+
+  --primary-font: "Open Sans", sans-serif;
+  --secondary-font: "Oswald", sans-serif;
+}
+
+/* Geral */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: 1rem;
+  background-color: var(--primary-color);
+}
+
+/* Header */
+header {
+  border-top: 15px solid var(--tertiary-color);
+  padding: 20px;
+}
+
+.header-logo {
+  width: 64px;
+  height: 64px;
+}
+
+.header-logo img {
+  width: 100%;
 }
