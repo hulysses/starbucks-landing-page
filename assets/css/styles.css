@@ -135,13 +135,15 @@ header > .flex {
 }
 
 /* Main grids */
-.area-1 {
+.area-1,
+.area-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
 
-.area-1__description {
-  padding: 40px;
+.area-1__description,
+.area-2__description {
+  padding-top: 55px;
   margin: auto;
 }
 
@@ -152,7 +154,8 @@ header > .flex {
   margin-bottom: 10px;
 }
 
-.area-1__description h2 {
+.area-1__description h2,
+.area-2__description h2 {
   font-family: var(--secondary-font);
   font-size: var(--font-size-large);
   text-transform: capitalize;
@@ -165,13 +168,15 @@ header > .flex {
   font-style: italic;
 }
 
-.area-1__description p {
+.area-1__description p,
+.area-2__description p {
   line-height: var(--line-height-large);
   margin-top: 30px;
   max-width: 450px;
 }
 
-.area-1__description a {
+.area-1__description a,
+.area-2__description a {
   display: inline-block;
   margin: 55px 0;
   padding: 10px 30px;
@@ -182,7 +187,8 @@ header > .flex {
   letter-spacing: 1px;
 }
 
-.area-1__description a:hover {
+.area-1__description a:hover,
+.area-2__description a:hover {
   display: inline-block;
   color: var(--primary-color);
   background-color: var(--button-color);
@@ -196,8 +202,23 @@ header > .flex {
   background-position: center;
 }
 
+.area-2__primary-image {
+  grid-row: 1 / 3;
+  grid-column: 1 / 2;
+  background-image: url(../images/foto3.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
 .area-1__secondary-image {
   background-image: url(../images/foto2.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 347px;
+}
+
+.area-2__secondary-image {
+  background-image: url(../images/foto4.jpg);
   background-size: cover;
   background-position: center;
   min-height: 347px;
