@@ -136,14 +136,20 @@ header > .flex {
 
 /* Main grids */
 .area-1,
-.area-2 {
+.area-2,
+.area-3 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
 
 .area-1__description,
 .area-2__description {
-  padding-top: 55px;
+  padding: 55px 0;
+  margin: auto;
+}
+
+.area-3__description {
+  padding: 250px 0;
   margin: auto;
 }
 
@@ -155,7 +161,8 @@ header > .flex {
 }
 
 .area-1__description h2,
-.area-2__description h2 {
+.area-2__description h2,
+.area-3__description h2 {
   font-family: var(--secondary-font);
   font-size: var(--font-size-large);
   text-transform: capitalize;
@@ -169,16 +176,18 @@ header > .flex {
 }
 
 .area-1__description p,
-.area-2__description p {
+.area-2__description p,
+.area-3__description p {
   line-height: var(--line-height-large);
   margin-top: 30px;
   max-width: 450px;
 }
 
 .area-1__description a,
-.area-2__description a {
+.area-2__description a,
+.area-3__description a {
   display: inline-block;
-  margin: 55px 0;
+  margin: 55px 0 0 0;
   padding: 10px 30px;
   color: var(--button-color);
   text-decoration: none;
@@ -188,10 +197,16 @@ header > .flex {
 }
 
 .area-1__description a:hover,
-.area-2__description a:hover {
-  display: inline-block;
+.area-2__description a:hover,
+.area-3__description a:hover {
   color: var(--primary-color);
   background-color: var(--button-color);
+}
+
+.area-3 {
+  background-image: url(../images/background2.jpg);
+  background-size: cover;
+  background-position: left;
 }
 
 .area-1__primary-image {
@@ -210,16 +225,25 @@ header > .flex {
   background-position: center;
 }
 
-.area-1__secondary-image {
-  background-image: url(../images/foto2.jpg);
+.area-3__primary-image {
+  grid-row: 1 / 2;
+  grid-column: 2 / 2;
+  background-image: url(../images/foto5.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.area-1__secondary-image,
+.area-2__secondary-image {
   background-size: cover;
   background-position: center;
   min-height: 347px;
 }
 
+.area-1__secondary-image {
+  background-image: url(../images/foto2.jpg);
+}
+
 .area-2__secondary-image {
   background-image: url(../images/foto4.jpg);
-  background-size: cover;
-  background-position: center;
-  min-height: 347px;
 }
