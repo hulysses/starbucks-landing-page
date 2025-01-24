@@ -8,10 +8,12 @@
   --tertiary-color: #117050;
   --input-border-color: #b3b3b3;
   --button-color: #454545;
+  --area-4-bg-color: #e8e9ee;
 
   --primary-font: "Open Sans", sans-serif;
   --secondary-font: "Oswald", sans-serif;
 
+  --font-size-small: 0.75rem;
   --font-size-default: 1rem;
   --font-size-large: 2.25rem;
   --font-size-extra-large: 6rem;
@@ -137,9 +139,14 @@ header > .flex {
 /* Main grids */
 .area-1,
 .area-2,
-.area-3 {
+.area-3,
+.area-4 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+
+.area-4 {
+  background-color: var(--area-4-bg-color);
 }
 
 .area-1__description,
@@ -148,7 +155,8 @@ header > .flex {
   margin: auto;
 }
 
-.area-3__description {
+.area-3__description,
+.area-4__description {
   padding: 250px 0;
   margin: auto;
 }
@@ -162,12 +170,17 @@ header > .flex {
 
 .area-1__description h2,
 .area-2__description h2,
-.area-3__description h2 {
+.area-3__description h2,
+.area-4__description h2 {
   font-family: var(--secondary-font);
   font-size: var(--font-size-large);
   text-transform: capitalize;
   max-width: 440px;
   line-height: var(--line-height-default);
+}
+
+.area-4__description h2 {
+  max-width: 300px;
 }
 
 .quote {
@@ -177,15 +190,21 @@ header > .flex {
 
 .area-1__description p,
 .area-2__description p,
-.area-3__description p {
+.area-3__description p,
+.area-4__description p {
   line-height: var(--line-height-large);
   margin-top: 30px;
   max-width: 450px;
 }
 
+.area-4__description p {
+  max-width: 313px;
+}
+
 .area-1__description a,
 .area-2__description a,
-.area-3__description a {
+.area-3__description a,
+.area-4__description a {
   display: inline-block;
   margin: 55px 0 0 0;
   padding: 10px 30px;
@@ -198,7 +217,8 @@ header > .flex {
 
 .area-1__description a:hover,
 .area-2__description a:hover,
-.area-3__description a:hover {
+.area-3__description a:hover,
+.area-4__description a:hover {
   color: var(--primary-color);
   background-color: var(--button-color);
 }
@@ -206,7 +226,7 @@ header > .flex {
 .area-3 {
   background-image: url(../images/background2.jpg);
   background-size: cover;
-  background-position: left;
+  background-position: right;
 }
 
 .area-1__primary-image {
@@ -233,6 +253,12 @@ header > .flex {
   background-position: center;
 }
 
+.area-4__primary-image {
+  background-image: url(../images/background3.jpg);
+  background-size: cover;
+  background-position: left;
+}
+
 .area-1__secondary-image,
 .area-2__secondary-image {
   background-size: cover;
@@ -246,4 +272,22 @@ header > .flex {
 
 .area-2__secondary-image {
   background-image: url(../images/foto4.jpg);
+}
+
+/* Footer */
+
+footer {
+  /* width: 100%; */
+  background-color: var(--tertiary-color);
+  color: var(--primary-color);
+  padding: 40px;
+}
+
+footer.flex {
+  justify-content: center;
+}
+
+footer p {
+  font-size: var(--font-size-small);
+  
 }
