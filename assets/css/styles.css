@@ -6,7 +6,8 @@
   --primary-color: #fff;
   --secondary-color: #000;
   --tertiary-color: #117050;
-  --border-color: #b3b3b3;
+  --input-border-color: #b3b3b3;
+  --button-color: #454545;
 
   --primary-font: "Open Sans", sans-serif;
   --secondary-font: "Oswald", sans-serif;
@@ -16,6 +17,7 @@
   --font-size-extra-large: 6rem;
 
   --line-height-default: 1.1;
+  --line-height-large: 1.6;
 }
 
 /* Geral */
@@ -68,7 +70,7 @@ header > .flex {
 .header-menu__search {
   display: flex;
   align-items: center;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--input-border-color);
 }
 
 .header-menu__search-icon {
@@ -158,10 +160,32 @@ header > .flex {
   line-height: var(--line-height-default);
 }
 
-.quote,
-.area-1__description p {
+.quote {
   margin-top: 20px;
+  font-style: italic;
+}
+
+.area-1__description p {
+  line-height: var(--line-height-large);
+  margin-top: 30px;
   max-width: 450px;
+}
+
+.area-1__description a {
+  display: inline-block;
+  margin: 55px 0;
+  padding: 10px 30px;
+  color: var(--button-color);
+  text-decoration: none;
+  border: 2px solid var(--button-color);
+  border-radius: 5px;
+  letter-spacing: 1px;
+}
+
+.area-1__description a:hover {
+  display: inline-block;
+  color: var(--primary-color);
+  background-color: var(--button-color);
 }
 
 .area-1__primary-image {
