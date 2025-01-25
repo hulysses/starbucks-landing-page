@@ -18,7 +18,6 @@ As seguintes tecnologias foram utilizadas no desenvolvimento do projeto:
 - HTML
 - CSS
 
-## 🚀 Imagem
 <div align="center">
     <img src="./assets/images/starbucks-lp.png" alt="Starbucks - Landing Page" /> 
 </div
